@@ -1,5 +1,4 @@
 import streamlit as st
-from dotenv import load_dotenv
 import pickle
 from PyPDF2 import PdfReader
 from streamlit_extras.add_vertical_space import add_vertical_space
@@ -42,8 +41,7 @@ def main():
 
     if openai_key==v:
         openai_key=st.secrets["OPENAI_API_KEY"]
-    # if openai_key=='':
-    #     load_dotenv()
+
     os.environ["OPENAI_API_KEY"] = openai_key
 
     # upload a PDF file
